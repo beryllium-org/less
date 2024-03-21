@@ -2,7 +2,7 @@ rename_process("less")
 vr("opts", be.api.xarg())
 be.api.setvar("return", "1")
 if len(vr("opts")["w"]):
-    with be.api.fopen(vr("opts")["w"][0]) as pv[get_pid()]["f"]:
+    with be.api.fs.open(vr("opts")["w"][0]) as pv[get_pid()]["f"]:
         if vr("f") is not None:
             vr("lines_tmp", vr("f").readlines())
 
